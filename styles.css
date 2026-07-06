@@ -206,14 +206,15 @@ textarea {
   margin: 0 auto;
   padding: 72px 0 56px;
   display: grid;
-  grid-template-columns: minmax(0, 0.92fr) minmax(420px, 1fr);
+  grid-template-columns: minmax(0, 1fr) minmax(420px, 0.92fr);
   gap: 46px;
-  align-items: center;
+  align-items: start;
 }
 
 .hero__content {
   position: relative;
   z-index: 1;
+  padding-top: 50px;
 }
 
 .eyebrow {
@@ -235,8 +236,8 @@ p {
 h1 {
   margin-bottom: 22px;
   color: var(--navy);
-  font-size: clamp(2.8rem, 6vw, 5.9rem);
-  line-height: 0.95;
+  font-size: clamp(2.8rem, 5vw, 5.4rem);
+  line-height: 1.02;
   letter-spacing: 0;
 }
 
@@ -1064,9 +1065,22 @@ h3 {
     font-size: clamp(2.5rem, 15vw, 4.4rem);
   }
 
+  .hero__content {
+    text-align: center;
+    padding-top: 20px;
+  }
+
   .hero__actions,
   .button {
     width: 100%;
+  }
+
+  .hero__actions {
+    justify-content: center;
+  }
+
+  .hero__proof {
+    justify-content: center;
   }
 
   .hero__media {
