@@ -23,7 +23,7 @@
       <a class="brand" href="#top" aria-label="PowerLink home">
         <img
           class="brand-logo"
-          src="file:///C:/Users/hp/Pictures/WhatsApp%20Image%202026-06-27%20at%2011.49.43%20AM%20%281%29.jpeg"
+          src="images/Logo.jpeg"
           alt="PowerLink logo"
         >
         <span class="brand-text">
@@ -40,6 +40,7 @@
 
       <div class="nav-panel" id="primary-menu">
         <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#process">Process</a>
@@ -203,6 +204,71 @@
       </div>
     </section>
 
+    <section class="section" id="gallery">
+      <div class="section__header reveal">
+        <p class="eyebrow">Portfolio</p>
+        <h2>Our installations and projects in action.</h2>
+        <p>A showcase of electrical, solar, CCTV, and maintenance work delivered across South Sudan.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <article class="gallery-card reveal" data-gallery-item>
+          <img src="images/img1.jpeg" alt="PowerLink installation work - Solar panels setup" loading="lazy">
+          <div class="gallery-overlay">
+            <button class="gallery-view" aria-label="View full image">View</button>
+          </div>
+        </article>
+        <article class="gallery-card reveal" data-gallery-item>
+          <img src="images/img2.jpeg" alt="PowerLink electrical installation - Wiring and setup" loading="lazy">
+          <div class="gallery-overlay">
+            <button class="gallery-view" aria-label="View full image">View</button>
+          </div>
+        </article>
+        <article class="gallery-card reveal" data-gallery-item>
+          <img src="images/img3.jpeg" alt="PowerLink CCTV installation - Camera setup" loading="lazy">
+          <div class="gallery-overlay">
+            <button class="gallery-view" aria-label="View full image">View</button>
+          </div>
+        </article>
+        <article class="gallery-card reveal" data-gallery-item>
+          <img src="images/img4.jpeg" alt="PowerLink solar battery system installation" loading="lazy">
+          <div class="gallery-overlay">
+            <button class="gallery-view" aria-label="View full image">View</button>
+          </div>
+        </article>
+        <article class="gallery-card reveal" data-gallery-item>
+          <img src="images/img5.jpeg" alt="PowerLink AC installation and service" loading="lazy">
+          <div class="gallery-overlay">
+            <button class="gallery-view" aria-label="View full image">View</button>
+          </div>
+        </article>
+        <article class="gallery-card reveal" data-gallery-item>
+          <img src="images/img6.jpeg" alt="PowerLink satellite TV setup and installation" loading="lazy">
+          <div class="gallery-overlay">
+            <button class="gallery-view" aria-label="View full image">View</button>
+          </div>
+        </article>
+        <article class="gallery-card reveal" data-gallery-item>
+          <img src="images/img7.jpeg" alt="PowerLink electrical distribution board upgrade" loading="lazy">
+          <div class="gallery-overlay">
+            <button class="gallery-view" aria-label="View full image">View</button>
+          </div>
+        </article>
+        <article class="gallery-card reveal" data-gallery-item>
+          <img src="images/img8.jpeg" alt="PowerLink commercial electrical project" loading="lazy">
+          <div class="gallery-overlay">
+            <button class="gallery-view" aria-label="View full image">View</button>
+          </div>
+        </article>
+        <article class="gallery-card reveal" data-gallery-item>
+          <img src="images/img9.jpeg" alt="PowerLink residential solar installation" loading="lazy">
+          <div class="gallery-overlay">
+            <button class="gallery-view" aria-label="View full image">View</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
     <section class="process" id="process">
       <div class="section__header reveal">
         <p class="eyebrow">How we work</p>
@@ -275,12 +341,34 @@
     </section>
   </main>
 
+  <div class="lightbox" id="gallery-lightbox" role="dialog" aria-hidden="true">
+    <button class="lightbox-close" aria-label="Close gallery">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+    <div class="lightbox-content">
+      <img id="lightbox-image" src="" alt="">
+    </div>
+    <button class="lightbox-prev" aria-label="Previous image">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="15 18 9 12 15 6"></polyline>
+      </svg>
+    </button>
+    <button class="lightbox-next" aria-label="Next image">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </button>
+  </div>
+
   <footer class="footer">
     <div class="footer__brand">
       <a class="brand" href="#top">
         <img
           class="brand-logo"
-          src="file:///C:/Users/hp/Pictures/WhatsApp%20Image%202026-06-27%20at%2011.49.43%20AM%20%281%29.jpeg"
+          src="images/Logo2.png"
           alt="PowerLink logo"
         >
         <span class="brand-text">
@@ -292,6 +380,7 @@
     </div>
     <div class="footer__links">
       <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
       <a href="#quote">Get a Quote</a>
