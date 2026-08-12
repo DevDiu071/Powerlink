@@ -150,6 +150,12 @@
           <p>DSTV, GOtv, and free-to-air installation, alignment, cabling, and signal troubleshooting.</p>
           <a href="#" data-whatsapp-message="Hello PowerLink, I need satellite TV setup.">Get connected</a>
         </article>
+        <article class="service-card reveal" data-category="security">
+          <span class="service-icon">07</span>
+          <h3>Electric Fence Installation</h3>
+          <p>Design, installation, and maintenance of electric perimeter fences for homes and businesses.</p>
+          <a href="#" data-whatsapp-message="Hello PowerLink, I need electric fence installation.">Secure a site</a>
+        </article>
         <article class="service-card reveal" data-category="maintenance">
           <span class="service-icon">06</span>
           <h3>Fault Finding & Repairs</h3>
@@ -176,6 +182,46 @@
           <li>Maintenance support after the work is complete</li>
         </ul>
       </div>
+    </section>
+
+    <section class="section" id="company-doc">
+      <div class="section__header reveal">
+        <p class="eyebrow">Company Document</p>
+        <h2>About PowerLink (Presentation)</h2>
+        <p>View our company presentation below — includes vision, services, and contact information.</p>
+      </div>
+
+      <div class="doc-preview">
+        <div id="pptx-embed-container">
+          <p>Loading presentation preview… <a href="Presentation-WPS%20Office.pptx" target="_blank" rel="noopener noreferrer">Open or download</a>.</p>
+        </div>
+        <noscript>
+          <p>Your browser has JavaScript disabled. <a href="Presentation-WPS%20Office.pptx" target="_blank" rel="noopener noreferrer">Open or download the presentation</a>.</p>
+        </noscript>
+      </div>
+      <script>
+        (function () {
+          try {
+              var filePath = '/Presentation-WPS Office.pptx';
+            var absoluteUrl = window.location.origin + filePath;
+            var officeEmbed = 'https://view.officeapps.live.com/op/embed.aspx?src=' + encodeURIComponent(absoluteUrl);
+            var container = document.getElementById('pptx-embed-container');
+            if (container) {
+              var iframe = document.createElement('iframe');
+              iframe.src = officeEmbed;
+              iframe.width = '100%';
+              iframe.height = '600';
+              iframe.style.border = '0';
+              iframe.style.borderRadius = '12px';
+              iframe.setAttribute('loading', 'lazy');
+              container.innerHTML = '';
+              container.appendChild(iframe);
+            }
+          } catch (e) {
+            // silently fail and leave the download link as fallback
+          }
+        })();
+      </script>
     </section>
 
     <section class="section projects" id="projects">
@@ -296,6 +342,32 @@
             <button class="gallery-view" aria-label="View full image">View</button>
           </div>
         </article>
+        <article class="gallery-card reveal" data-gallery-item>
+          <img src="images/new.jpeg" alt="PowerLink new project" loading="lazy">
+          <div class="gallery-overlay">
+            <button class="gallery-view" aria-label="View full image">View</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="videos">
+      <div class="section__header reveal">
+        <p class="eyebrow">Videos</p>
+        <h2>Project videos and on-site work.</h2>
+        <p>Short clips showing installations, maintenance, and team activity across projects.</p>
+      </div>
+
+      <div class="video-grid">
+        <article class="video-card reveal">
+          <video controls preload="metadata" width="100%" src="videos/WhatsApp%20Video%202026-08-11%20at%2010.06.28%20PM.mp4">Your browser does not support the video tag.</video>
+        </article>
+        <article class="video-card reveal">
+          <video controls preload="metadata" width="100%" src="videos/WhatsApp%20Video%202026-08-11%20at%2010.06.32%20PM.mp4">Your browser does not support the video tag.</video>
+        </article>
+        <article class="video-card reveal">
+          <video controls preload="metadata" width="100%" src="videos/WhatsApp%20Video%202026-08-11%20at%2010.08.34%20PM.mp4">Your browser does not support the video tag.</video>
+        </article>
       </div>
     </section>
 
@@ -348,6 +420,9 @@
             <option>CCTV installation</option>
             <option>AC installation or repair</option>
             <option>Fault finding and repairs</option>
+            <option>Satellite TV</option>
+            <option>MultiTV &amp; Dish Alignment</option>
+            <option>Electric fence installation</option>
           </select>
         </label>
         <label>
@@ -414,6 +489,7 @@
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
       <a href="#quote">Get a Quote</a>
+      <a href="Presentation-WPS%20Office.pptx" download>Presentation</a>
     </div>
     <p class="copyright">Copyright 2026 PowerLink Electrical & Solar Works. All rights reserved.</p>
   </footer>
