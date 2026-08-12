@@ -836,6 +836,19 @@ h3 {
   background: #000;
 }
 
+.video-fallback {
+  display: none;
+  margin-top: 10px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.video-fallback a {
+  color: var(--orange);
+  font-weight: 900;
+}
+
 .gallery-overlay {
   position: absolute;
   inset: 0;

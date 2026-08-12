@@ -231,26 +231,35 @@
         <p>Examples of work PowerLink can deliver for homeowners, offices, shops, and institutions.</p>
       </div>
 
-      <div class="project-grid">
-        <article class="project-card reveal">
-          <span>Residential</span>
-          <h3>Home solar backup</h3>
-          <p>Solar panels, inverter, and battery storage sized for lighting, appliances, and daily power needs.</p>
+      <div class="video-grid">
+        <article class="video-card reveal">
+          <video controls preload="metadata" width="100%" playsinline>
+            <source src="videos/vid1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="video-fallback" aria-hidden="true">
+            <p>Can't play this video in your browser. <a href="videos/vid1.mp4" target="_blank" rel="noopener noreferrer">Open or download</a>.</p>
+          </div>
         </article>
-        <article class="project-card reveal">
-          <span>Commercial</span>
-          <h3>Office electrical upgrade</h3>
-          <p>Distribution board cleanup, socket planning, lighting improvement, and safer cable management.</p>
+        <article class="video-card reveal">
+          <video controls preload="metadata" width="100%" playsinline>
+            <source src="videos/vid2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="video-fallback" aria-hidden="true">
+            <p>Can't play this video in your browser. <a href="videos/vid2.mp4" target="_blank" rel="noopener noreferrer">Open or download</a>.</p>
+          </div>
         </article>
-        <article class="project-card reveal">
-          <span>Security</span>
-          <h3>Shop CCTV coverage</h3>
-          <p>Camera placement, recorder setup, mobile viewing, and clean cabling for entrances and sales areas.</p>
+        <article class="video-card reveal">
+          <video controls preload="metadata" width="100%" playsinline>
+            <source src="videos/vid3.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="video-fallback" aria-hidden="true">
+            <p>Can't play this video in your browser. <a href="videos/vid3.mp4" target="_blank" rel="noopener noreferrer">Open or download</a>.</p>
+          </div>
         </article>
       </div>
-    </section>
-
-    <section class="section" id="gallery">
       <div class="section__header reveal">
         <p class="eyebrow">Portfolio</p>
         <h2>Our installations and projects in action.</h2>
@@ -504,5 +513,41 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    (function () {
+      // Diagnostic: show fallback if video errors, and fetch HEAD to inspect server response
+      const videos = document.querySelectorAll('.video-card video');
+      videos.forEach((video) => {
+        const fallback = video.parentElement.querySelector('.video-fallback');
+        function showFallback(reason) {
+          if (fallback) {
+            fallback.style.display = 'block';
+            fallback.setAttribute('aria-hidden', 'false');
+          }
+          console.warn('Video playback issue:', video.currentSrc || video.querySelector('source')?.src, reason);
+        }
+
+        video.addEventListener('error', (e) => {
+          const mediaErr = e?.target?.error;
+          showFallback(mediaErr ? mediaErr.code : 'unknown');
+        });
+
+        // Probe the source with a HEAD request to see server headers
+        const src = video.querySelector('source')?.src;
+        if (src) {
+          fetch(src, { method: 'HEAD' }).then((res) => {
+            console.log('Video HEAD:', src, res.status, res.headers.get('content-type'), 'accept-ranges=', res.headers.get('accept-ranges'));
+            if (!res.ok) showFallback('HTTP ' + res.status);
+            const ct = res.headers.get('content-type') || '';
+            if (!ct.includes('video')) {
+              showFallback('unexpected content-type: ' + ct);
+            }
+          }).catch((err) => {
+            showFallback('fetch error: ' + err.message);
+          });
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
