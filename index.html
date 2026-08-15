@@ -184,44 +184,32 @@
       </div>
     </section>
 
-    <section class="section" id="company-doc">
+    <section class="section" id="company-overview">
       <div class="section__header reveal">
-        <p class="eyebrow">Company Document</p>
-        <h2>About PowerLink (Presentation)</h2>
-        <p>View our company presentation below — includes vision, services, and contact information.</p>
+        <p class="eyebrow">Company Overview</p>
+        <h2>PowerLink at a glance.</h2>
+        <p>Built around practical service, reliable workmanship, and long-term customer support across South Sudan.</p>
       </div>
 
-      <div class="doc-preview">
-        <div id="pptx-embed-container">
-          <p>Loading presentation preview… <a href="Presentation-WPS%20Office.pptx" target="_blank" rel="noopener noreferrer">Open or download</a>.</p>
-        </div>
-        <noscript>
-          <p>Your browser has JavaScript disabled. <a href="Presentation-WPS%20Office.pptx" target="_blank" rel="noopener noreferrer">Open or download the presentation</a>.</p>
-        </noscript>
+      <div class="reveal" style="max-width: 100%; color: var(--ink);">
+        <p>
+          PowerLink Electrical &amp; Solar Works is a local technical service partner focused on dependable electrical work, solar solutions, CCTV, AC servicing, satellite TV installations, and general maintenance.
+        </p>
+        <p>
+          Our work is designed to help homes, commercial spaces, institutions, and businesses maintain safe power, efficient energy use, and dependable security systems. We combine technical expertise with straightforward communication so clients know exactly what they are getting before work begins.
+        </p>
+        <ul class="check-list">
+          <li>Electrical installation, repairs, and fault finding</li>
+          <li>Solar power systems for homes and businesses</li>
+          <li>CCTV, security upgrades, and monitoring setups</li>
+          <li>AC installation, maintenance, and repair services</li>
+          <li>Satellite TV alignment, equipment setup, and troubleshooting</li>
+          <li>Electric fence installation and site security solutions</li>
+        </ul>
+        <p>
+          We believe in quality materials, safe installations, practical timelines, and after-service support. That is why PowerLink remains a trusted name for everyday reliability and technical service in Juba and beyond.
+        </p>
       </div>
-      <script>
-        (function () {
-          try {
-              var filePath = '/Presentation-WPS Office.pptx';
-            var absoluteUrl = window.location.origin + filePath;
-            var officeEmbed = 'https://view.officeapps.live.com/op/embed.aspx?src=' + encodeURIComponent(absoluteUrl);
-            var container = document.getElementById('pptx-embed-container');
-            if (container) {
-              var iframe = document.createElement('iframe');
-              iframe.src = officeEmbed;
-              iframe.width = '100%';
-              iframe.height = '600';
-              iframe.style.border = '0';
-              iframe.style.borderRadius = '12px';
-              iframe.setAttribute('loading', 'lazy');
-              container.innerHTML = '';
-              container.appendChild(iframe);
-            }
-          } catch (e) {
-            // silently fail and leave the download link as fallback
-          }
-        })();
-      </script>
     </section>
 
     <section class="section projects" id="projects">
@@ -233,31 +221,20 @@
 
       <div class="video-grid">
         <article class="video-card reveal">
-          <video controls preload="metadata" width="100%" playsinline>
-            <source src="videos/vid1.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <div class="video-fallback" aria-hidden="true">
-            <p>Can't play this video in your browser. <a href="videos/vid1.mp4" target="_blank" rel="noopener noreferrer">Open or download</a>.</p>
-          </div>
-        </article>
-        <article class="video-card reveal">
-          <video controls preload="metadata" width="100%" playsinline>
-            <source src="videos/vid2.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <div class="video-fallback" aria-hidden="true">
-            <p>Can't play this video in your browser. <a href="videos/vid2.mp4" target="_blank" rel="noopener noreferrer">Open or download</a>.</p>
-          </div>
-        </article>
-        <article class="video-card reveal">
-          <video controls preload="metadata" width="100%" playsinline>
-            <source src="videos/vid3.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <div class="video-fallback" aria-hidden="true">
-            <p>Can't play this video in your browser. <a href="videos/vid3.mp4" target="_blank" rel="noopener noreferrer">Open or download</a>.</p>
-          </div>
+          <a
+            class="youtube-link"
+            href="https://www.youtube.com/watch?v=Zk8gqR7XO-k"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Watch PowerLink video on YouTube"
+          >
+            <img
+              src="https://img.youtube.com/vi/Zk8gqR7XO-k/maxresdefault.jpg"
+              alt="PowerLink YouTube video thumbnail"
+              loading="lazy"
+            >
+            <span class="youtube-play" aria-hidden="true">▶</span>
+          </a>
         </article>
       </div>
       <div class="section__header reveal">
@@ -356,35 +333,6 @@
           <div class="gallery-overlay">
             <button class="gallery-view" aria-label="View full image">View</button>
           </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="section" id="videos">
-      <div class="section__header reveal">
-        <p class="eyebrow">Videos</p>
-        <h2>Project videos and on-site work.</h2>
-        <p>Short clips showing installations, maintenance, and team activity across projects.</p>
-      </div>
-
-      <div class="video-grid">
-        <article class="video-card reveal">
-          <video controls preload="metadata" width="100%">
-            <source src="/videos/vid1.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-        </article>
-        <article class="video-card reveal">
-          <video controls preload="metadata" width="100%">
-            <source src="videos/vid2.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-        </article>
-        <article class="video-card reveal">
-          <video controls preload="metadata" width="100%">
-            <source src="videos/vid3.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
         </article>
       </div>
     </section>
@@ -507,7 +455,7 @@
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
       <a href="#quote">Get a Quote</a>
-      <a href="Presentation-WPS%20Office.pptx" download>Presentation</a>
+      <a href="#" data-pptx-link download>Presentation</a>
     </div>
     <p class="copyright">Copyright 2026 PowerLink Electrical & Solar Works. All rights reserved.</p>
   </footer>

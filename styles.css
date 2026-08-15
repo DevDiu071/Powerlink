@@ -553,8 +553,9 @@ h3 {
 .check-list li {
   position: relative;
   padding-left: 30px;
-  color: #e7f0fa;
+  color: var(--ink);
   font-weight: 700;
+  text-shadow: none;
 }
 
 .check-list li::before {
@@ -827,10 +828,45 @@ h3 {
   justify-content: center;
 }
 
-.video-card video {
+.youtube-link {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 560px;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(6, 26, 49, 0.12);
+  background: #000;
+}
+
+.youtube-link img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.youtube-play {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  transform: translate(-50%, -50%);
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--orange);
+  font-size: 2rem;
+  line-height: 76px;
+  text-align: center;
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.18);
+}
+
+.video-card video,
+.video-card iframe {
   width: 100%;
   max-width: 600px;
-  height: auto;
+  height: 315px;
   border-radius: 12px;
   box-shadow: 0 12px 40px rgba(6, 26, 49, 0.12);
   background: #000;
@@ -1164,6 +1200,136 @@ h3 {
   .doc-preview {
     display: flex;
     justify-content: center;
+    margin-bottom: 18px;
+  }
+
+  .doc-cover {
+    display: block;
+    width: min(100%, 760px);
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .doc-cover:hover {
+    transform: translateY(-2px);
+  }
+
+  .doc-cover__page {
+    position: relative;
+    min-height: 420px;
+    padding: 18px 18px 28px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #ffffff 0%, #f4f6fb 100%);
+    border: 1px solid rgba(6, 26, 49, 0.08);
+    box-shadow: 0 18px 45px rgba(6, 26, 49, 0.08);
+    overflow: hidden;
+  }
+
+  .doc-cover__page::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(54, 124, 255, 0.04), rgba(243, 117, 43, 0.04));
+    pointer-events: none;
+  }
+
+  .doc-cover__header {
+    position: relative;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 34px;
+    z-index: 1;
+  }
+
+  .doc-cover__dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  .doc-cover__dot--red { background: #ff6b5f; }
+  .doc-cover__dot--amber { background: #efc74a; }
+  .doc-cover__dot--green { background: #57c971; }
+
+  .doc-cover__content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+    text-align: center;
+    color: var(--navy);
+  }
+
+  .doc-cover__eyebrow {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #5a6986;
+    margin-bottom: 18px;
+  }
+
+  .doc-cover__title {
+    margin: 0;
+    font-size: clamp(2.3rem, 4vw, 4rem);
+    line-height: 1.05;
+    letter-spacing: -0.05em;
+    color: #0e2340;
+  }
+
+  .doc-cover__subtitle {
+    margin: 10px 0 22px;
+    font-size: 1.08rem;
+    color: #4d6485;
+  }
+
+  .doc-cover__divider {
+    width: 120px;
+    height: 4px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--orange), #f5a623);
+    margin-bottom: 18px;
+  }
+
+  .doc-cover__tag {
+    display: inline-block;
+    padding: 10px 18px;
+    border-radius: 999px;
+    background: rgba(54, 124, 255, 0.12);
+    color: #1d5ad3;
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .doc-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 8px;
+  }
+
+  .doc-fallback {
+    width: min(100%, 900px);
+    padding: 28px 20px;
+    border: 1px solid rgba(6, 26, 49, 0.08);
+    border-radius: 14px;
+    background: rgba(250, 250, 253, 0.9);
+    box-shadow: 0 12px 40px rgba(6, 26, 49, 0.08);
+    text-align: center;
+  }
+
+  .doc-fallback p {
+    margin: 0 0 16px;
+    color: var(--muted);
+    line-height: 1.6;
   }
 
   .doc-preview object {
@@ -1175,6 +1341,10 @@ h3 {
   }
 
   @media (max-width: 680px) {
+    .doc-cover__page {
+      min-height: 300px;
+    }
+
     .doc-preview object {
       height: 420px;
     }
